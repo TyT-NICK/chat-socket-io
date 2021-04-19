@@ -2,6 +2,8 @@ const app = require('express')()
 const http = require('http').Server(app)
 const io = require('socket.io')(http)
 
+app.use(require('express').static('public'))
+
 app.get('/', function (request, response) {
   response.sendFile(__dirname + '/index.html')
 })
@@ -16,5 +18,5 @@ io.on('connection', function (socket) {
 })
 
 http.listen(8000, function () {
-  console.log('Сервер запущен')
+  console.log('Сервер запущен, перейдите по адресу http://localhost:8000')
 })

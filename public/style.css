@@ -1,0 +1,36 @@
+html {
+  font-size: 14px;
+}
+  
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 15px;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 700px;
+  height: 100%;
+  gap: 7px;
+}
+
+.message-form * {
+  flex: 0 0 auto;
+}
+
+#message {
+  resize: none;
+}
+
+#message-area {
+  flex: 1 1 auto;
+  overflow-y: scroll;
+}
+
+.message span {
+  font-weight: bold;
+}
